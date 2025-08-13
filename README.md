@@ -43,25 +43,24 @@ A **social Pong gaming platform** powered by a **microservices backend** and a m
 
 ## Repository Structure
 
-ft_transcendence/
-├── client/                        # Frontend (Vite, TypeScript, Tailwind)
-│   ├── nginx/                         # Nginx gateway config (proxying, TLS, routes)
-│   ├── ...
-├── server/                        # Backend microservices
-│   ├── auth-service/              # Registration, login, JWT, TOTP
-│   ├── profile-service/           # Profile CRUD + online status
-│   ├── relationships-service/     # Friends, blocking, relationship logic
-│   ├── chat-service/              # WebSocket chat
-│   ├── notifications-service/     # Notification queueing and delivery
-│   ├── game-service/              # Real-time Pong logic
-│   ├── dashboard-service/         # Live dashboard updates
-│   ├── redis/                     # Redis config and initialization
-│   └── docs/                      # API and service documentation
-├── docker-compose.yml             # Orchestrates all services & infrastructure
-├── Makefile                       # Useful automation (build, up, down)
-├── README.md                      # This document
-└── .gitignore
-
+  ft_transcendence/
+  ├── client/ # Frontend (Vite, TypeScript, Tailwind)
+  │ ├── nginx/ # Nginx gateway config (proxying, TLS, routes)
+  │ └── ... # Other frontend folders/files
+  ├── server/ # Backend microservices
+  │ ├── auth-service/ # Registration, login, JWT, TOTP
+  │ ├── profile-service/ # Profile CRUD + online status
+  │ ├── relationships-service/ # Friends, blocking, relationship logic
+  │ ├── chat-service/ # WebSocket chat
+  │ ├── notifications-service/ # Notification queueing and delivery
+  │ ├── game-service/ # Real-time Pong logic
+  │ ├── dashboard-service/ # Live dashboard updates
+  │ ├── redis/ # Redis config and initialization
+  │ └── docs/ # API and service documentation
+  ├── docker-compose.yml # Orchestrates all services & infrastructure
+  ├── Makefile # Useful automation (build, up, down)
+  ├── README.md # This document
+  └── .gitignore # Git ignore file
 
 ---
 
