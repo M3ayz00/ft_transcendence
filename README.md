@@ -42,7 +42,7 @@ A **social Pong gaming platform** powered by a **microservices backend** and a m
 ---
 
 ## Repository Structure
-
+```
 ft_transcendence/
 ├── client/                        # Frontend (Vite, TypeScript, Tailwind)
 │   ├── nginx/                     # Nginx gateway config (proxying, TLS, routes)
@@ -61,7 +61,7 @@ ft_transcendence/
 ├── Makefile                       # Useful automation (build, up, down)
 ├── README.md                      # This document
 └── .gitignore                     # Git ignore file
-
+```
 ---
 
 ## Architecture Overview
