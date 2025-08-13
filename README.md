@@ -68,34 +68,34 @@ ft_transcendence/
 ## Architecture Overview
 
 ```mermaid
-flowchart TD
-    A[Frontend (SPA)] --> B[Nginx API Gateway]
+flowchart TD;
+    A[Frontend (SPA)] --> B[Nginx API Gateway];
 
-    B --> C1[Auth Service]
-    B --> C2[Profile Service]
-    B --> C3[Relationships Service]
-    B --> C4[Chat Service]
-    B --> C5[Notifications Service]
-    B --> C6[Game Service]
-    B --> C7[Dashboard Service]
+    B --> C1[Auth Service];
+    B --> C2[Profile Service];
+    B --> C3[Relationships Service];
+    B --> C4[Chat Service];
+    B --> C5[Notifications Service];
+    B --> C6[Game Service];
+    B --> C7[Dashboard Service];
 
-    C1 --> D1[SQLite]
-    C2 --> D2[SQLite]
-    C3 --> D3[SQLite]
-    C4 --> D4[SQLite]
-    C5 --> D5[SQLite]
-    C6 --> D6[SQLite]
-    C7 --> D7[SQLite]
+    C1 --> D1[SQLite];
+    C2 --> D2[SQLite];
+    C3 --> D3[SQLite];
+    C4 --> D4[SQLite];
+    C5 --> D5[SQLite];
+    C6 --> D6[SQLite];
+    C7 --> D7[SQLite];
 
-    C1 --> E[RabbitMQ Message Broker]
-    C2 --> E
-    C3 --> E
-    C4 --> E
-    C5 --> E
-    C6 --> E
-    C7 --> E
+    C1 --> E[RabbitMQ Message Broker];
+    C2 --> E;
+    C3 --> E;
+    C4 --> E;
+    C5 --> E;
+    C6 --> E;
+    C7 --> E;
 
-    E --> F[Redis (cache, session, blockList)]
+    E --> F[Redis (cache, session, blockList)];
 ```
 
 - **Nginx** handles all incoming HTTP(s) and WebSocket traffic.
