@@ -65,9 +65,6 @@ ft_transcendence/
 
 ---
 
-
----
-
 ## Architecture Overview
 
 ```mermaid
