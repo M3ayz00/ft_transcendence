@@ -118,14 +118,13 @@ flowchart TD
      D7:::db
     classDef db fill:#e0eaff,stroke:#0074D9,stroke-width:2px
     classDef gateway fill:#fff6e0,stroke:#F39C12,stroke-width:2px
+    style B fill:#000000,color:none
     style D1 fill:#616161
     style D2 color:none,fill:#616161
     style D3 fill:#616161
     style D4 fill:#616161
     style D5 fill:#616161,color:none
-    style D6 fill:#616161,color:none
-    style D7 fill:#616161
-
+    style D6 fill:#616161,
 ```
 
 - **Nginx** handles all incoming HTTP(s) and WebSocket traffic.
