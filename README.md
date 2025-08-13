@@ -68,34 +68,57 @@ ft_transcendence/
 ## Architecture Overview
 
 ```mermaid
-flowchart TD;
-    A[Frontend (SPA)] --> B[Nginx API Gateway];
+flowchart TD
+ subgraph Gateway["Gateway"]
+    direction TB
+        A["Frontend SPA"]
+        B["Nginx API Gateway"]
+  end
+ subgraph subGraph1["Application Services"]
+    direction TB
+        C1["Auth Service"]
+        C2["Profile Service"]
+        C3["Relationships Service"]
+        C4["Chat Service"]
+        C5["Notifications Service"]
+        C6["Game Service"]
+        C7["Dashboard Service"]
+  end
+ subgraph subGraph2["Shared Infrastructure"]
+    direction TB
+        R["Redis (cache, session, blockList)"]
+        Q["RabbitMQ"]
+  end
+ subgraph Databases["Databases"]
+    direction TB
+        D1["Auth DB (SQLite)"]
+        D2["Profile DB (SQLite)"]
+        D3["Relationships DB (SQLite)"]
+        D4["Chat DB (SQLite)"]
+        D5["Notifications DB (SQLite)"]
+        D6["Game DB (SQLite)"]
+        D7["Dashboard DB (SQLite)"]
+  end
+    A --> B
+    B --> C1 & C2 & C3 & C4 & C5 & C6 & C7
+    C1 --> D1 & Q & R
+    C2 --> D2 & Q & R
+    C3 --> D3 & Q & R
+    C4 --> D4 & Q & R
+    C5 --> D5 & Q
+    C6 --> D6 & Q
+    C7 --> Q & R
+     B:::gateway
+     D1:::db
+     D2:::db
+     D3:::db
+     D4:::db
+     D5:::db
+     D6:::db
+     D7:::db
+    classDef db fill:#e0eaff,stroke:#0074D9,stroke-width:2px
+    classDef gateway fill:#fff6e0,stroke:#F39C12,stroke-width:2px
 
-    B --> C1[Auth Service];
-    B --> C2[Profile Service];
-    B --> C3[Relationships Service];
-    B --> C4[Chat Service];
-    B --> C5[Notifications Service];
-    B --> C6[Game Service];
-    B --> C7[Dashboard Service];
-
-    C1 --> D1[SQLite];
-    C2 --> D2[SQLite];
-    C3 --> D3[SQLite];
-    C4 --> D4[SQLite];
-    C5 --> D5[SQLite];
-    C6 --> D6[SQLite];
-    C7 --> D7[SQLite];
-
-    C1 --> E[RabbitMQ Message Broker];
-    C2 --> E;
-    C3 --> E;
-    C4 --> E;
-    C5 --> E;
-    C6 --> E;
-    C7 --> E;
-
-    E --> F[Redis (cache, session, blockList)];
 ```
 
 - **Nginx** handles all incoming HTTP(s) and WebSocket traffic.
