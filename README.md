@@ -146,8 +146,7 @@ flowchart TD
 git clone https://github.com/M3ayz00/ft_transcendence.git
 cd ft_transcendence
 
-# Copy .env.example files into each service's directory and configure secrets
-# (see /client/.env and /server/auth-service/.env, etc.)
+# setup /client/.env and /server/.env, etc
 
 # Launch the entire stack
 make up
@@ -163,7 +162,6 @@ The backend is organized as microservices, each handling a specific domain. Resp
 - Integrating **RabbitMQ** for event-driven communication across services
 - Handling **user validation and caching** using Redis
 - Maintaining **per-service SQLite databases** for data isolation
-- Configuring **Nginx** as the API gateway for HTTP routing and WebSocket proxying
 - Supporting **Docker Compose** deployment for consistent development and testing
 
 ---
