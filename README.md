@@ -124,7 +124,9 @@ flowchart TD
     style D3 fill:#616161
     style D4 fill:#616161
     style D5 fill:#616161,color:none
-    style D6 fill:#616161,
+    style D6 fill:#616161,color:none
+    style D7 fill:#616161
+
 ```
 
 - **Nginx** handles all incoming HTTP(s) and WebSocket traffic.
