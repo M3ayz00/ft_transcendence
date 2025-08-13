@@ -4,9 +4,9 @@ A **social Pong gaming platform** powered by a **microservices backend** and a m
 
 ---
 
-##  About the Project
+## About the Project
 
-**ft_transcendence** is a rich, production-like microservices project that delivers a real-time multiplayer Pong experience. It includes:
+**ft_transcendence** is a production-like microservices project that delivers a real-time multiplayer Pong experience. It includes:
 
 - Secure authentication with **JWT + TOTP 2FA**
 - Live chat and friend-management
@@ -16,34 +16,32 @@ A **social Pong gaming platform** powered by a **microservices backend** and a m
 - Efficient caching and state storage using **Redis**
 - Separate **SQLite** databases per service
 
-I, **M3ayz00**, architected and implemented the entire **backend** infrastructure, including API services, inter-service messaging, WebSocket management, and distributed authentication.
-
 ---
 
-##  Core Features
+## Core Features
 
 - **Secure Authentication**
   - Registration, login, JWT tokens, secure cookie storage
-  - Email- and app-based TOTP 2FA, token rotation, revocation handling  
+  - Email- and app-based TOTP 2FA, token rotation, revocation handling
 - **Profiles & Relationships**
   - User profiles, avatars, stats
-  - Friend requests, blocking, online status detection via WebSockets  
+  - Friend requests, blocking, online status detection via WebSockets
 - **Chat & Notifications**
   - Real-time messaging with WebSocket endpoints
-  - Notifications delivered instantly; persisted and synced upon reconnect  
+  - Notifications delivered instantly; persisted and synced upon reconnect
 - **Gameplay & Tournaments**
   - Real-time Pong matches hosted in `game-service`
-  - Match invitations, play-again workflows, and stats tracking  
+  - Match invitations, play-again workflows, and stats tracking
 - **Live Dashboard & Rankings**
-  - Real-time user stats updates and leaderboard display via `dashboard-service`  
+  - Real-time user stats updates and leaderboard display via `dashboard-service`
 - **Caching & Shared State**
-  - Redis stores user session validation, block lists, profile caches  
+  - Redis stores user session validation, block lists, profile caches
 - **Asynchronous Messaging**
-  - RabbitMQ mediates all event-driven interactions across services  
+  - RabbitMQ mediates all event-driven interactions across services
 
 ---
 
-##  Repository Structure
+## Repository Structure
 
 ft_transcendence/
 ├── client/                        # Frontend (Vite, TypeScript, Tailwind)
@@ -67,7 +65,10 @@ ft_transcendence/
 
 ---
 
-##  Architecture Overview
+
+---
+
+## Architecture Overview
 
 ```mermaid
 flowchart TD
@@ -89,7 +90,7 @@ flowchart TD
     C6 --> D6[SQLite]
     C7 --> D7[SQLite]
 
-    C1 --> E[RabbitMQ Message Broker (async events)]
+    C1 --> E[RabbitMQ Message Broker]
     C2 --> E
     C3 --> E
     C4 --> E
