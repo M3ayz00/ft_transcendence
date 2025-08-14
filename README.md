@@ -96,7 +96,6 @@ flowchart TD
         D4["Chat DB (SQLite)"]
         D5["Notifications DB (SQLite)"]
         D6["Game DB (SQLite)"]
-        D7["Dashboard DB (SQLite)"]
   end
     A --> B
     B --> C1 & C2 & C3 & C4 & C5 & C6 & C7
