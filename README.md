@@ -146,7 +146,7 @@ flowchart TD
 git clone https://github.com/M3ayz00/ft_transcendence.git
 cd ft_transcendence
 
-# setup /client/.env and /server/.env, etc
+# setup /server/.env based on /server/.env.example
 
 # Launch the entire stack
 make up
